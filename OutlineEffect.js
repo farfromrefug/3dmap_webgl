@@ -1,7 +1,7 @@
 import {Texture2D, ProgramManager} from '@luma.gl/core';
 import {AmbientLight, DirectionalLight} from '@deck.gl/core';
 import {Effect} from '@deck.gl/core';
-import {Matrix4, Vector3} from 'math.gl';
+import {Matrix4, Vector3} from '@math.gl/core';
 import OutlinePass from './outlinePass';
 import {default as outline} from './outline';
 

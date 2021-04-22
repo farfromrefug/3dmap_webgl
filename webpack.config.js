@@ -1,17 +1,21 @@
 // NOTE: To use this example standalone (e.g. outside of deck.gl repo)
 // delete the local development overrides at the bottom of this file
-
-const CONFIG = {
+const { join, resolve } = require('path');
+module.exports = {
   mode: 'development',
-
   entry: {
     app: './app.js'
   },
-
   output: {
     library: 'App'
   },
-
+  // stats:'verbose',
+  resolve: {
+    alias: {
+      '@mapbox/martini':resolve(__dirname, 'martini/')
+    },
+    extensions: ['.js', '.jsx', '.ts', '.tsx']
+  },
   module: {
     rules: [
       {
@@ -27,6 +31,3 @@ const CONFIG = {
     ]
   }
 };
-
-// This line enables bundling against src in this repo rather than installed module
-module.exports = env => (env ? require('../../webpack.config.local')(CONFIG)(env) : CONFIG);

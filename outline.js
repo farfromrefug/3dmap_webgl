@@ -1,6 +1,6 @@
 // import {, PROJECTION_MODE} from '../../lib/constants';
 import {COORDINATE_SYSTEM, _memoize as memoize, project} from '@deck.gl/core';
-import {Vector3, Matrix4} from 'math.gl';
+import {Vector3, Matrix4} from '@math.gl/core';
 import {pixelsToWorld} from '@math.gl/web-mercator';
 
 const vs = `
